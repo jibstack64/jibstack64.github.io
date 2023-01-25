@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    background-color: rgb(49, 45, 77);
+    cursor: default;
+}
+
+.main {
+    margin: auto;
+    padding: 1px;
+}
+
+/* boxes */
+
+.box {
+    padding: 10px;
+    border-radius: 8px;
+    width: 95%;
+    height: fit-content;
+    box-shadow: 10px 10px rgb(29, 27, 43);
+    background-color: black;
+    font-size: 13px;
+    font-family: "Roboto Mono";
+    color: rgb(161, 235, 50);
+    margin-bottom: 19px;
+}
+
+.box:hover {
+    background-color: rgb(8, 8, 8);;
+}
+
+section {
+    width: auto;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 2px dashed rgb(0, 69, 0);
+}
+
+section:hover {
+    background-color: rgba(29, 29, 29, 0.624);
+    color: rgb(182, 255, 74);
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 0.2vw;
+    grid-auto-rows: auto;
+}
+
+/* text stylings */
+
+.title-zen {
+    font-size: 21px;
+    font-family: "Zen Dots", cursive;
+}
+
+.subtitle-zen {
+    font-size: 17px;
+    font-family: "Zen Dots", cursive;
+}
+
+.title-rob {
+    font-family: "Roboto Mono";
+    font-size: 18px;
+    font-style: italic;
+}
+
+.subtitle-rob {
+    font-size: 15px;
+    font-family: "Roboto Mono", cursive;
+}
+
+p {
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+    font-family: "Roboto Mono";
+    margin: 5px
+}
+
+/* borders / seperators */
+
+.seperator-thin {
+    width: 100%;
+    border: 1.75px dashed darkgreen;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.seperator-thick {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1.75px solid darkgreen;
+}
+
+/* links */
+
+a:link {
+    color: rgb(94, 255, 153);
+}
+
+a:visited {
+    color: rgb(16, 190, 0);
+}
+
+a:hover {
+    color: antiquewhite;
+}
+
+/* inputs, textareas, etc. */
+
+textarea {
+    background-color: rgb(31, 31, 31);
+    font-family: "Roboto Mono";
+    font-size: 15px;
+    color: rgb(203, 203, 203);
+    text-align: left;
+    border: 2px dotted white;
+    border-radius: 0.3vw;
+    height: fit-content;
+}
+
+/* slideshow */
+
+.slideshow {
+    width: fit-content;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    align-items: center;
+    display: none;
+}
+
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -5px;
+    padding: 15px;
+    color: greenyellow;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.687);
+    font-size: 15px; 
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0px;
+    top: 88%;
+    width: 100%;
+    text-align: center;
+}
+
+.numbered-text {
+    color: whitesmoke;
+    background-color: rgba(1, 1, 1, 0.5);
+    font-size: 15px;
+    padding: 6px 10px;
+    position: absolute;
+    top: 0px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slide-img {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.list {
+    list-style-type: square;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* end */

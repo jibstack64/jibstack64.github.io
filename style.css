@@ -217,8 +217,8 @@ textarea {
     box-sizing: border-box;
     display: grid;
     grid-auto-flow: row;
-    gap: 10px;
-    row-gap: 2px;
+    gap: 13px;
+    row-gap: 1px;
     grid-template-columns: repeat(2, 1fr);
 }
 

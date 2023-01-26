@@ -20,9 +20,11 @@ function correctStylings() {
     document.getElementsByClassName("main")[0].style.width = `${percent}%`
 
     /* friend cards on mobile */
-    let cards = document.getElementById("cards")
+    let cards = document.getElementsByClassName("cards")
     if (mobile) {
-        cards.id = null
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].setAttribute("class", null)
+        }
     }
 }
 

@@ -44,13 +44,6 @@ section:hover {
     color: rgb(182, 255, 74);
 }
 
-article {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 0.2vw;
-    grid-auto-rows: auto;
-}
-
 /* text stylings */
 
 .title-zen {

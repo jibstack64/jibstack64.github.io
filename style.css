@@ -11,6 +11,21 @@ body {
     padding: 1px;
 }
 
+/* links */
+
+a:link {
+    color: rgb(94, 255, 153);
+}
+
+a:visited {
+    color: rgb(16, 190, 0);
+}
+
+a:hover {
+    color: antiquewhite;
+    cursor: pointer;
+}
+
 /* boxes */
 
 .box {
@@ -75,6 +90,49 @@ p {
     margin: 5px
 }
 
+/* sections nav */
+
+.sects {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cloak {
+    z-index: 9;
+    padding: 50px;
+    height: 49px;
+    width: auto;
+    box-shadow: 5px 2px #ffffff29 ;
+    background: #ffffff29;
+}
+
+.cloaked {
+    width: auto;
+    height: 150px;
+    position: relative;
+    cursor: not-allowed;
+}
+
+.sect {
+    color: rgb(90, 242, 105);
+    text-decoration: none;
+}
+
+.sect:visited {
+    color: rgb(90, 242, 105);
+}
+
+.sect:hover {
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+
 /* borders / seperators */
 
 .seperator-thin {
@@ -89,21 +147,6 @@ p {
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1.75px solid darkgreen;
-}
-
-/* links */
-
-a:link {
-    color: rgb(94, 255, 153);
-}
-
-a:visited {
-    color: rgb(16, 190, 0);
-}
-
-a:hover {
-    color: antiquewhite;
-    cursor: pointer;
 }
 
 /* inputs, textareas, etc. */

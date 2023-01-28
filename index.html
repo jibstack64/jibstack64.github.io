@@ -14,7 +14,7 @@
 </head>
 <body onload="correctStylings(); showSlides(1)">
     <div class="main" style="width: 94.5%">
-        <div class="box" style="margin-top: 2px;">
+        <div id="welcome" class="box" style="margin-top: 2px;">
             <div class="title-zen">
                 Welcome
             </div>
@@ -31,20 +31,96 @@
                 <a href="https://github.com/jibstack64/jibstack64.github.io/issues/new">create an issue</a>.
             </div>
         </div>
-        <div class="box">
-            <section>
-                <div class="slideshow">
-                    <div class="slide fade">
-                        <div class="numbered-text">1 / 1</div>
-                        <img class="slide-img" src="images/placeholder.gif">
-                        <div class="text">Under development.</div>
-                    </div>
-                    <a class="previous" onclick="moveSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        <div id="sections" class="box">
+            <div class="title-zen">
+                Sections
+            </div>
+            <div class="seperator-thick"></div>
+            <div class="seperator-thick">
+                <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
+                    Home
                 </div>
-            </section>
+                <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
+                <ol class="subtitle-rob">
+                    <li>
+                        <a href="#projects" class="sect">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#slideshow" class="sect">
+                            Showcase
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#programming-links" class="sect">
+                            Friends and dev groups
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="sect">
+                            Contact me
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="cloaked">
+                <div class="sects">
+                    <div class="seperator-thick" style="position: absolute; opacity: 0.6; width: 49%; left: 51%; height: 138.5px;">
+                        <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
+                            Chat
+                        </div>
+                        <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
+                        <ol class="subtitle-rob">
+                            <li>
+                                <a href="/chat/live.html" class="sect">
+                                    Live chat
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chat/board.html" class="sect">
+                                    Threads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chat/updates.html" class="sect">
+                                    Updates
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="seperator-thick" style="position: absolute; opacity: 0.6; width: 49%; left: 0%;">
+                        <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
+                            Games
+                        </div>
+                        <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
+                        <ol class="subtitle-rob">
+                            <li>
+                                <a href="/games/bounce.html" class="sect">
+                                    Bounce
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/games/balls.html" class="sect">
+                                    Balls
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/games/boxpush.html" class="sect">
+                                    Boxpush
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="cloak">
+                    <div style="text-align: center; color: rgb(255, 29, 74); font-size: 20px;">
+                        UNDER HEAVY DEVELOPMENT
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="box">
+        <div id="projects" class="box">
             <div class="title-zen">
                 My Projects
             </div>
@@ -157,7 +233,20 @@
                 <a href="https://github.cm/jibstack64" target="_blank">GitHub</a>!</b>
             </p>
         </div>
-        <div class="box">
+        <div id="slideshow" class="box">
+            <section>
+                <div class="slideshow">
+                    <div class="slide fade">
+                        <div class="numbered-text">1 / 1</div>
+                        <img class="slide-img" src="images/placeholder.gif">
+                        <div class="text">Under development.</div>
+                    </div>
+                    <a class="previous" onclick="moveSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                </div>
+            </section>
+        </div>
+        <div id="programming-links" class="box">
             <div class="title-zen">
                 Programming links
             </div>
@@ -232,7 +321,7 @@
                 </div>
             </div>
         </div>
-        <div class="box">
+        <div id="contact" class="box">
             <div class="title-zen">
                 Contact me
             </div>

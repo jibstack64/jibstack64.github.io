@@ -217,11 +217,11 @@ textarea {
 
 .card {
     background-color: #282b30;
+    overflow-y: hidden;
     width: 100%;
     border: 2.5px solid #36393e;
     margin-bottom: 5px;
     border-radius: 5px;
-    overflow: auto;
 }
 
 .card-top {

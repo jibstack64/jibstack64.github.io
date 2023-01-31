@@ -15,12 +15,12 @@ function correctStylings() {
         if (width > generic) {
             generic = width
         }
-        percent = (width / generic) * 40
+        percent = (width / generic) * 38
     }
     document.getElementsByClassName("main")[0].style.width = `${percent}%`
 
     /* friend cards on mobile */
-    let cards = document.getElementsByClassName("cards")
+    let cards = document.getElementsByClassName("stack")
     if (mobile) {
         for (var i = 0; i < cards.length; i++) {
             cards[i].setAttribute("class", null)

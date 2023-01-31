@@ -48,7 +48,6 @@ a:hover {
 section {
     width: auto;
     align-items: center;
-    margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
     border: 2px dashed rgb(0, 69, 0);
@@ -149,6 +148,13 @@ p {
     border: 1.75px solid darkgreen;
 }
 
+.project-seperator {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid darkgreen;
+}
+
 /* inputs, textareas, etc. */
 
 textarea {
@@ -247,7 +253,7 @@ textarea {
 
 /* profile cards */
 
-.cards {
+.stack {
     width: auto;
     height: auto;
     box-sizing: border-box;
@@ -255,16 +261,16 @@ textarea {
     grid-auto-flow: row;
     gap: 13px;
     row-gap: 1px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
 }
 
 .card {
     background-color: #282b30;
     overflow-y: hidden;
     overflow-x: hidden;
-    width: 100%;
-    border: 2.5px solid #36393e;
-    margin-bottom: 5px;
+    width: 99%;
+    border: 3px solid #36393e;
+    margin-bottom: 7px;
     border-radius: 5px;
 }
 
@@ -275,13 +281,30 @@ textarea {
     background-color: #36393e;
 }
 
-.card-img {
+.card-img-holder {
+    background-color: #36393e;
     float: left;
-    padding: 2px;
+    width: fit-content;
+    padding-right: 3px;
+    height: auto;
+}
+
+.card-img {
     margin: 5px;
-    border: 2px solid #596280;
-    border-radius: 30%;
-    width: 20%;
+    margin-top: 7.5px;
+    border: 2px solid #5771c5;
+    border-radius: 10%;
+    width: 75px;
+}
+
+.card-dark {
+    z-index: 8;
+    position: absolute;
+    float: left;
+    background-color: #36393e;
+    width: 4.865%;
+    height: 9.5%;
+    border-radius: 2px;
 }
 
 .card-name {
@@ -323,11 +346,12 @@ textarea {
 }
 
 .card-text {
-    margin: 2px;
-    font-size: 15px;
+    z-index: 10;
+    font-size: 12.5px;
     color: rgb(221, 221, 221);
-    padding-left: 26%;
-    padding-top: 3%;
+    padding-left: 90px;
+    margin: 10px;
+    margin-right: 1px;
 }
 
 /* fade in*/

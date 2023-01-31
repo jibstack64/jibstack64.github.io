@@ -32,7 +32,6 @@ function correctStylings() {
     var ip;
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "https://api.db-ip.com/v2/free/self", true);
-    xhr.setRequestHeader("Content-Type", "json");
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
         debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent);
@@ -42,7 +41,6 @@ function correctStylings() {
 
     xhr = new XMLHttpRequest();
     xhr.open("GET", `https://ipapi.co/${ip}/json`, true);
-    xhr.setRequestHeader("Content-Type", "json");
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
         debug.innerHTML = debug.innerHTML.replace("[country]", data["country"]).replace("[city]", data["city"]);

@@ -33,14 +33,14 @@ function correctStylings() {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "https://api.db-ip.com/v2/free/self", true);
     xhr.onload = function() {
-        var data = JSON.parse(xhr.responseText);
+        var data = JSON.parse(xhr.response);
         ip = data["ipAddress"];
         debug.innerHTML = debug.innerHTML.replace("[ip]", ip).replace("[user]", navigator.userAgent);
 
         let xhr2 = new XMLHttpRequest();
         xhr2.open("GET", `https://ipapi.co/${ip}/json`, true);
         xhr2.onload = function() {
-            var data = JSON.parse(xhr2.responseText);
+            var data = JSON.parse(xhr2.response);
             debug.innerHTML = debug.innerHTML.replace("[country]", data["country_name"]).replace("[city]", data["city"]);
         }
         xhr2.send();

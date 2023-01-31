@@ -34,16 +34,16 @@ function correctStylings() {
     xhr.open("GET", "https://api.db-ip.com/v2/free/self", true);
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
-        debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent);
         ip = data["ipAddress"];
-    }
-    xhr.send();
+        debug.innerHTML = debug.innerHTML.replace("[ip]", ip).replace("[user]", navigator.userAgent);
 
-    xhr = new XMLHttpRequest();
-    xhr.open("GET", `https://ipapi.co/${ip}/json`, true);
-    xhr.onload = function() {
-        var data = JSON.parse(xhr.responseText);
-        debug.innerHTML = debug.innerHTML.replace("[country]", data["country"]).replace("[city]", data["city"]);
+        let xhr2 = new XMLHttpRequest();
+        xhr2.open("GET", `https://ipapi.co/${ip}/json`, true);
+        xhr2.onload = function() {
+            var data = JSON.parse(xhr2.responseText);
+            debug.innerHTML = debug.innerHTML.replace("[country]", data["country_name"]).replace("[city]", data["city"]);
+        }
+        xhr2.send();
     }
     xhr.send();
 }

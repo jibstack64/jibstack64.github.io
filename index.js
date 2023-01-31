@@ -31,25 +31,23 @@ function correctStylings() {
     let debug = document.getElementsByName("debug-target")[0];
     var ip;
     let xhr = new XMLHttpRequest();
-    xhr.open("get", "https://api.db-ip.com/v2/free/self", true);
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://jibstack64.github.io")
-    xhr.setRequestHeader("content-type", "json");
+    xhr.open("GET", "https://api.db-ip.com/v2/free/self", true);
+    xhr.setRequestHeader("Content-Type", "json");
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
         debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent);
         ip = data["ipAddress"];
     }
-    xhr.send(null);
+    xhr.send();
 
     xhr = new XMLHttpRequest();
-    xhr.open("get", `https://ipapi.co/${ip}/json`, true);
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://jibstack64.github.io")
-    xhr.setRequestHeader("content-type", "json");
+    xhr.open("GET", `https://ipapi.co/${ip}/json`, true);
+    xhr.setRequestHeader("Content-Type", "json");
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
         debug.innerHTML = debug.innerHTML.replace("[country]", data["country"]).replace("[city]", data["city"]);
     }
-    xhr.send(null);
+    xhr.send();
 }
 
 // for collapsibles

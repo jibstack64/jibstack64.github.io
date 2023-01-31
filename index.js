@@ -26,6 +26,42 @@ function correctStylings() {
             cards[i].setAttribute("class", null)
         }
     }
+
+    /* fill debug */
+    let debug = document.getElementsByName("debug-target")[0];
+    let xhr = new XMLHttpRequest();
+    xhr.open("get", "https://api.db-ip.com/v2/free/self", true);
+    xhr.setRequestHeader("content-type", "json");
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent)
+    }
+    xhr.send(null)
+    $.getJSON('https://ipapi.co/'+$('.ip').val()+'/json', function(data){
+        debug.innerHTML += `<div class="seperator-thin"></div>City: ${data.city}<br>Country: ${data.country}`
+    });
+}
+
+// for collapsibles
+function activate(id) {
+    var par = document.getElementById(id);
+    var butt;
+    var content;
+    for (c = 0; c < par.children.length; c++) {
+        child = par.children[c];
+        if (child.getAttribute("class") == "activate") {
+            butt = child;
+        } else if (child.getAttribute("class") == "hide" || child.getAttribute("class") == "show") {
+            content = child;
+        }
+    }
+    if (content.getAttribute("class") == "hide") {
+        content.setAttribute("class", "show");
+        butt.innerHTML = "🡅"
+    } else {
+        content.setAttribute("class", "hide");
+        butt.innerHTML = "🡇"
+    }
 }
 
 // whenever resize, correct stylings

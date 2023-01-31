@@ -9,14 +9,17 @@
     <meta content="Hey, I'm Isaac, a 15 year old software developer from Dorset, England." property="og:description" />
     <meta content="https://jibstack64.github.io/favicon.ico" property="og:image" />
     <meta content="#EF7D57" data-react-helmet="true" name="theme-color" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="correctStylings(); showSlides(1)">
-    <div class="main" style="width: 40%">
+    <div class="main" style="width: 38%">
         <div id="welcome" class="box" style="margin-top: 2px;">
-            <div class="title-zen">
-                Welcome
+            <div>
+                <div class="title-zen">
+                    Welcome
+                </div>
             </div>
             <div class="seperator-thick"></div>
             <div class="subtitle-rob">
@@ -333,6 +336,22 @@
                 I am less likely to respond over Instagram or Discord; for serious matters, email me.
             </div>
 
+        </div>
+        <div id="debug" class="box">
+            <button class="activate" onclick="activate('debug')">🡇</button>
+            <div class="title-zen" style="color: rgb(219, 40, 40);">
+                Debug
+            </div>
+            <div class="seperator-thick"></div>
+            <div class="hide">
+                <div class="subtitle-rob" name="debug-target">
+                    IP: <div style="color: rgb(219, 40, 40);">[ip]</div>
+                    User-Agent: <div style="color: rgb(219, 40, 40);">[user]</div>
+                    <div class="seperator-thin"></div>
+                    Country: <div style="color: rgb(219, 40, 40);">[country]</div>
+                    City: <div style="color: rgb(219, 40, 40);">[city]</div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

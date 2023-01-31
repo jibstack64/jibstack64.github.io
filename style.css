@@ -66,7 +66,7 @@ section:hover {
 }
 
 .subtitle-zen {
-    font-size: 17px;
+    font-size: 16px;
     font-family: "Zen Dots", cursive;
 }
 
@@ -402,6 +402,31 @@ textarea {
 @-ms-keyframes fadeout {
     from { opacity: 1; }
     to   { opacity: 0; }
+}
+
+/* for collapsable content */
+
+.show {
+    display: contents;
+    overflow: show;
+}
+
+.hide {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.activate {
+    float: right;
+    height: fit-content;
+    cursor: pointer;
+    padding: 0;
+    color: whitesmoke;
+    font-size: 13px;
+    background-color: #282b30;
+    padding: 3px;
+    border: none;
 }
 
 /* end */

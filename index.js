@@ -29,17 +29,27 @@ function correctStylings() {
 
     /* fill debug */
     let debug = document.getElementsByName("debug-target")[0];
+    var ip;
     let xhr = new XMLHttpRequest();
     xhr.open("get", "https://api.db-ip.com/v2/free/self", true);
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://jibstack64.github.io")
     xhr.setRequestHeader("content-type", "json");
     xhr.onload = function() {
         var data = JSON.parse(xhr.responseText);
-        debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent)
+        debug.innerHTML = debug.innerHTML.replace("[ip]", data["ipAddress"]).replace("[user]", navigator.userAgent);
+        ip = data["ipAddress"];
     }
-    xhr.send(null)
-    $.getJSON('https://ipapi.co/'+$('.ip').val()+'/json', function(data){
-        debug.innerHTML += `<div class="seperator-thin"></div>City: ${data.city}<br>Country: ${data.country}`
-    });
+    xhr.send(null);
+
+    xhr = new XMLHttpRequest();
+    xhr.open("get", `https://ipapi.co/${ip}/json`, true);
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://jibstack64.github.io")
+    xhr.setRequestHeader("content-type", "json");
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        debug.innerHTML = debug.innerHTML.replace("[country]", data["country"]).replace("[city]", data["city"]);
+    }
+    xhr.send(null);
 }
 
 // for collapsibles

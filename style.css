@@ -155,6 +155,13 @@ p {
     border: 1px solid darkgreen;
 }
 
+.language {
+    position: relative;
+    width: 30px;
+    float: right;
+    border: 1px solid darkgreen;
+}
+
 /* inputs, textareas, etc. */
 
 textarea {

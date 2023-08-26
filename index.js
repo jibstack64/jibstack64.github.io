@@ -5,6 +5,7 @@ function correctStylings(forceMobile = false) {
     // GET STUFF
 
     var topBar = document.getElementsByClassName("top-bar")[0]
+    var footer = document.getElementsByClassName("footer")[0];
     var holder = document.getElementById("sections")
     var elements = document.getElementsByClassName("section")
     var isFirefox = ('netscape' in window) && / rv:/.test(navigator.userAgent)
@@ -26,6 +27,7 @@ function correctStylings(forceMobile = false) {
         alert("You are on the mobile version of the website. Errors are more likely. The site operates better on desktop.")
 
         topBar.style.width = "100%"
+        footer.style.width = "100%"
         holder.style.width = "50em"
 
         for (let i = 0; i < elements.length; i++) {

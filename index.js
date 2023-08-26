@@ -22,12 +22,6 @@ function correctStylings(forceMobile = false) {
     colourPicker.setAttribute("value", document.body.style.backgroundColor)
     holder.style = `padding-top: ${document.querySelector(".top-bar").offsetHeight}px`
 
-    document.getElementById("colourpicker").addEventListener("input", function() {
-        console.log(this.value);
-        document.getElementsByTagName("body")[0].style.backgroundColor = this.value;
-        alert("changed")
-    })
-
     // MOBILE ADJUSTMENTS
 
     if (mobile) {
@@ -51,4 +45,10 @@ function correctStylings(forceMobile = false) {
         
         document.getElementById("projects").innerHTML = "<b style=\"color: lightcoral\">Projects disabled.</b><p>The projects list is currently disabled on mobile devices due to rendering issues. If you wish to see a list of my projects, check out my <x class=\"dark\"><a href=\"https://github.com/jibstack64?tab=repositories\">GitHub.</a></x>"
     }
+}
+
+function changeBackground() {
+    clr = document.getElementById("colourpicker").value
+    console.log(clr)
+    document.body.style.backgroundColor = clr
 }

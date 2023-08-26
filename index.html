@@ -13,402 +13,123 @@
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="correctStylings(); showSlides(1)">
-    <div class="main" style="width: 38%">
-        <div id="welcome" class="box" style="margin-top: 2px;">
-            <div>
-                <div class="title-zen">
-                    Welcome
-                </div>
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="subtitle-rob">
-                Hey, I'm Isaac, a 16-year-old software developer from Dorset, England.
-                <br>
-                I love computers and creating software for various uses. I'm skilled in various areas, and I'm open to freelancing. I often work with low-level languages, and I also explore cybersecurity and web development from time to time.
-                <a href="https://github.com/jibstack64/jibstack64.github.io/issues/new">create an issue</a>.
+<body onload="correctStylings()">
+    <div class="top-bar">
+        <div class="news">
+            <div class="marquee">
+                <p id="marquee" style="color: lightcoral;">
+                    Under development.
+                </p>
             </div>
         </div>
-        <div id="sections" class="box">
-            <div class="title-zen">
-                Sections
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="seperator-thick">
-                <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
-                    Home
+        <ol>
+            <li class="emphasis" style="padding-right: 30px; color: rgb(222, 197, 166);">
+                jibstack64
+            </li>
+            <li class="enlarge light">
+                <a href="#">
+                    home
+                </a>
+            </li>
+            <li class="enlarge light">
+                <a href="#projects">
+                    projects
+                </a>
+            </li>
+            <li class="enlarge light">
+                <a href="#contact">
+                    contact
+                </a>
+            </li>
+            <li style="float: right">
+                <a href="https://github.com/jibstack64">
+                    <img style="background-color: black" src="images/github.png" class="emblem">
+                </a>
+            </li>
+            <li style="float: right; padding-right: 10px;">
+                <a href="">
+                    <img style="background-color: black" src="images/discord.png" class="emblem">
+                </a>
+            </li>
+        </ol>
+        <div class="sep-thick"></div>
+    </div>
+    <div id="sections" class="section-container">
+        <div>
+            <div class="section-container">
+                <div id="introduction" class="section">
+                    <b>
+                        A brief introduction.
+                    </b>
+                    <p>
+                        Hey, I'm Joseph, a 16-year-old software developer from Dorset, UK. Welcome to my personalised site - I hope you find it informative and easy to navigate.
+                    </p>
                 </div>
-                <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
-                <ol class="subtitle-rob">
-                    <li>
-                        <a href="#projects" class="sect">
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#slideshow" class="sect">
-                            Showcase
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#programming-links" class="sect">
-                            Friends and dev groups
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="sect">
-                            Contact me
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#debug" class="sect">
-                            Debug
-                        </a>
-                    </li>
-                </ol>
+                <div class="section">
+                    <b>
+                        Skillset.   
+                    </b>
+                    <p>
+                        My skillset is primarly focused on developing efficient and utility-oriented software. I am fluent in C, C++, Go, Python. I can adopt any framework/language if necessary.
+                    </p>
+                </div>
             </div>
-            <div class="cloaked">
-                <div class="sects">
-                    <div class="seperator-thick" style="position: absolute; opacity: 0.6; width: 49%; left: 51%; height: 138.5px;">
-                        <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
-                            Chat
+            <div class="section-container">
+                <div id="projects" class="section">
+                    <b>
+                        A few of my projects.
+                    </b>
+                    <p>
+                        Some of these projects are old, unmaintained or need fixing. If you are interested in any of my projects and wish to contribute, <x class="penumbra"><a href="#contact">contact me.</a></x>
+                    </p>
+                    <div class="sep-thin"></div>
+                    <div class="subsection-container">
+                        <div style="width: 100% ;">
+                            <div class="subsection-container">
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/know-it-all" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/image-to-excel" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                            </div>
+                            <div class="subsection-container">
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/hashcrack" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/ascii" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                            </div>
+                            <div class="subsection-container">
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/keysnogger" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/interact" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                                <div class="subsection">
+                                    <div class="github-card" data-github="jibstack64/field" data-width="100%" data-height="" data-theme="default"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
-                        <ol class="subtitle-rob">
-                            <li>
-                                <a href="/chat/live.html" class="sect">
-                                    Live chat
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/chat/board.html" class="sect">
-                                    Threads
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/chat/updates.html" class="sect">
-                                    Updates
-                                </a>
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="seperator-thick" style="position: absolute; opacity: 0.6; width: 49%; left: 0%;">
-                        <div class="title-rob" style="padding-top: 10px; padding-left: 10px;">
-                            Games
-                        </div>
-                        <div style="border: 1.5px solid darkgreen; margin-top: 10px;"></div>
-                        <ol class="subtitle-rob">
-                            <li>
-                                <a href="/games/bounce.html" class="sect">
-                                    Bounce
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/games/balls.html" class="sect">
-                                    Balls
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/games/boxpush.html" class="sect">
-                                    Boxpush
-                                </a>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="cloak">
-                    <div style="text-align: center; color: rgb(255, 29, 74); font-size: 20px;">
-                        UNDER HEAVY DEVELOPMENT
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="projects" class="box">
-            <div class="title-zen">
-                My Projects
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="subtitle-rob">
+            <div id="contact" class="section">
                 <b>
-                    ⮑ Command-line executables:
+                    Contact me.
                 </b>
-            </div>
-            <div class="project-seperator"></div>
-            <div class="stack">
-                <section>
-                    <div class="title-rob">
-                        🐝
-                        <a href="https://github.com/jibstack64/bee" target="_blank">
-                            bee
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        An extremely rudimentary scripting language. 
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        👾 
-                        <a href="https://github.com/jibstack64/ascii" target="_blank">
-                            ascii
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        A standalone executable that converts a standard image into viable ASCII art.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        🗄️ 
-                        <a href="https://github.com/jibstack64/know-it-all" target="_blank">
-                            KIAL
-                        </a>
-                        <img class="language" src="images/languages/cpp.png">
-                    </div>
-                    <p>
-                        A command-line utility for indexing, modifying and managing a database of many items.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        🔑
-                        <a href="https://github.com/jibstack64/hashcrack" target="_blank">
-                            hashcrack
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        A program for cracking hashed passwords given a list of key terms.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        🔥
-                        <a href="https://github.com/jibstack64/dogdown" target="_blank">
-                            dogdown
-                        </a>
-                        <img class="language" src="images/languages/python.png">
-                    </div>
-                    <p>
-                        A Python script for sending a large quantity of a given payload to a HTTP(S) server.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        💬
-                        <a href="https://github.com/jibstack64/interact" target="_blank">
-                            interact
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        An end-to-end encrypted TCP chat. Optional ngrok deployment.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        👺
-                        <a href="https://github.com/jibstack64/trollcord" target="_blank">
-                            trollcord
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        A command-line utility for trolling on Discord.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        🎵
-                        <a href="https://github.com/jibstack64/spotistash" target="_blank">
-                            spotistash
-                        </a>
-                        <img class="language" src="images/languages/python.png">
-                    </div>
-                    <p>
-                        A script I cooked up that compiles all of your playlist's songs to a single playlist. 
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        ⌨️
-                        <a href="https://github.com/jibstack64/keysnogger" target="_blank">
-                            keysnogger
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        A cross-platform keylogger.
-                    </p>
-                </section>
-            </div>
-            <div class="subtitle-rob">
-                <b>
-                    ⮑ Libraries:
-                </b>
-            </div>
-            <div class="project-seperator"></div>
-            <div class="stack">
-                <section>
-                    <div class="title-rob">
-                        👨‍💻
-                        <a href="https://github.com/jibstack64/field" target="_blank">
-                            field
-                        </a>
-                        <img class="language" src="images/languages/cpp.png">
-                    </div>
-                    <p>
-                        A subcommand-based argument parsing library for C++.
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        🌈
-                        <a href="https://github.com/jibstack64/pretty" target="_blank">
-                            pretty
-                        </a>
-                        <img class="language" src="images/languages/cpp.png">
-                    </div>
-                    <p>
-                        A simple, lightweight unix console-colouring library for C++. 
-                    </p>
-                </section>
-                <section>
-                    <div class="title-rob">
-                        ✨
-                        <a href="https://github.com/jibstack64/gocular" target="_blank">
-                            gocular
-                        </a>
-                        <img class="language" src="images/languages/golang.png">
-                    </div>
-                    <p>
-                        A simple TUI library for Go.
-                    </p>
-                </section>
-            </div>
-            <p>
-                These are only a few of my main projects, <b>check out the rest on my
-                <a href="https://github.cm/jibstack64" target="_blank">GitHub</a>!</b>
-            </p>
-        </div>
-        <div id="slideshow" class="box">
-            <section>
-                <div class="slideshow">
-                    <div class="slide fade">
-                        <div class="numbered-text">1 / 1</div>
-                        <img class="slide-img" src="images/placeholder.gif">
-                        <div class="text">Under development.</div>
-                    </div>
-                    <a class="previous" onclick="moveSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
-                </div>
-            </section>
-        </div>
-        <div id="programming-links" class="box">
-            <div class="title-zen">
-                Programming links
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-name">
-                        jumbledFox
-                    </div>
-                    <div class="card-seperator"></div>
-                    <a class="card-link" href="https://github.com/jumbledFox" target="_blank">GitHub</a> <b style="color: grey;">|</b>
-                    <a class="card-link" href="javascript:alert('jumbledFox#7214');">Discord</a>
-                </div>
-                <div class="card-img-holder">
-                    <img src="images/jumbledFox.png" class="card-img">
-                </div>
-                <div class="card-text">
-                    Well-esteemed game developer and fellow Oingo Boingo enjoyer!
-                    Go check out his wonderful <a href="https://jumbledFox.github.io" target="_blank">website</a>!
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-name">
-                        Bre3ze
-                    </div>
-                    <div class="card-seperator"></div>
-                    <a class="card-link" href="https://github.com/horacegill" target="_blank">GitHub</a> <b style="color: grey;">|</b>
-                    <a class="card-link" href="javascript:alert('Bre3ze#2735');">Discord</a>
-                </div>
-                <div class="card-img-holder">
-                    <img src="images/horacegill.jpg" class="card-img">
-                </div>
-                <div class="card-text">
-                    My best friend and aspiring developer. He is currently learning Python, go check out his new-coming projects!
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-name">
-                        Golang Dorset
-                    </div>
-                    <div class="card-seperator"></div>
-                    <a class="card-link" href="https://discord.gg/tPZpBgr5VT" target="_blank">Discord</a> <b style="color: grey;">|</b>
-                    <a class="card-link" href="https://github.com/golangdorset" target="_blank">GitHub</a> <b style="color: grey;">|</b>
-                    <a class="card-link" href="https://mobile.twitter.com/golangdorset" target="_blank">Twitter</a>
-                </div>
-                <div class="card-img-holder">
-                    <img src="images/gopher.png" class="card-img">
-                </div>
-                <div class="card-text">
-                    A community of Golang enthusiasts based in Dorset. Great for finding fellow developers in the area.
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-name">
-                        hidden devs
-                    </div>
-                    <div class="card-seperator"></div>
-                    <a class="card-link" href="https://discord.gg/64QP9EqFx3" target="_blank">Discord</a>
-                </div>
-                <div class="card-img-holder">
-                    <img src="images/hidden-devs.jpg" class="card-img">
-                </div>
-                <div class="card-text">
-                    A place for local developers to collaborate and share their ideas and interests. Created by me.
-                </div>
-            </div>
-        </div>
-        <div id="contact" class="box">
-            <div class="title-zen">
-                Contact me
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="subtitle-rob">
-                If you ever need to contact me for whatever reason, you can:
                 <ul>
-                    <li>Add me on <a href="https://discordhub.com/profile/1066778132033573054" target="_blank">Discord</a></li>
-                    <li>Friend me on <a href="https://instagram.com/isaacc1707" target="_blank">Instagram</a></li>
-                    <li>Send me an <a href="mailto:josephbedford@proton.me" target="_blank">email</a></li>
+                    <li class="penumbra">
+                        <a href="mailto:josephbedford@proton.me">
+                            Email.
+                        </a>
+                    </li>
                 </ul>
-                I am less likely to respond over Instagram or Discord; for serious matters, email me.
-            </div>
-
-        </div>
-        <div id="debug" class="box">
-            <button class="activate" onclick="activate('debug')">🡇</button>
-            <div class="title-zen" style="color: rgb(219, 40, 40);">
-                Debug
-            </div>
-            <div class="seperator-thick"></div>
-            <div class="hide">
-                <div class="subtitle-rob" name="debug-target">
-                    IP: <div style="color: rgb(219, 40, 40);">[ip]</div>
-                    User-Agent: <div style="color: rgb(219, 40, 40);">[user]</div>
-                    <div class="seperator-thin"></div>
-                    Country: <div style="color: rgb(219, 40, 40);">[country]</div>
-                    City: <div style="color: rgb(219, 40, 40);">[city]</div>
-                </div>
             </div>
         </div>
     </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ function correctStylings(forceMobile = false) {
     document.getElementById("colourpicker").addEventListener("input", function() {
         console.log(this.value);
         document.getElementsByTagName("body")[0].style.backgroundColor = this.value;
+        alert("changed")
     })
 
     // MOBILE ADJUSTMENTS

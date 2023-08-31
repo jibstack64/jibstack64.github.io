@@ -6,7 +6,6 @@ function correctStylings(forceMobile = false) {
 
     var topBar = document.getElementsByClassName("top-bar")[0]
     var footer = document.getElementsByClassName("footer")[0];
-    var colourPicker = document.getElementById("colourpicker");
     var holder = document.getElementById("sections")
     var elements = document.getElementsByClassName("section")
     var isFirefox = ('netscape' in window) && / rv:/.test(navigator.userAgent)
@@ -19,7 +18,6 @@ function correctStylings(forceMobile = false) {
 
     // SMALL ADJUSTMENTS
     
-    colourPicker.setAttribute("value", document.body.style.backgroundColor)
     holder.style = `padding-top: ${document.querySelector(".top-bar").offsetHeight}px`
 
     // MOBILE ADJUSTMENTS
@@ -45,10 +43,4 @@ function correctStylings(forceMobile = false) {
         
         document.getElementById("projects").innerHTML = "<b style=\"color: lightcoral\">Projects disabled.</b><p>The projects list is currently disabled on mobile devices due to rendering issues. If you wish to see a list of my projects, check out my <x class=\"dark\"><a href=\"https://github.com/jibstack64?tab=repositories\">GitHub.</a></x>"
     }
-}
-
-function changeBackground() {
-    clr = document.getElementById("colourpicker").value
-    console.log(clr)
-    document.body.style.backgroundColor = clr
 }

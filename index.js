@@ -44,3 +44,8 @@ function correctStylings(forceMobile = false) {
         document.getElementById("projects").innerHTML = "<b style=\"color: lightcoral\">Projects disabled.</b><p>The projects list is currently disabled on mobile devices due to rendering issues. If you wish to see a list of my projects, check out my <x class=\"dark\"><a href=\"https://github.com/jibstack64?tab=repositories\">GitHub.</a></x>"
     }
 }
+
+function goTo(l) {
+    
+    document.location.href = `https://github.com/jibstack64/${l}`
+}

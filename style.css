@@ -91,13 +91,41 @@ body {
     margin: 5px;
     margin-top: 10px;
     padding: 10px;
-    color: white;
+    color: black;
     background-color: rgb(184, 184, 184);
     border-color: rgb(184, 184, 184);
     border-width: 4px;
     border-style: solid;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(184, 184, 184);
+}
+
+.github b {
+    flex: 0;
+}
+
+.github p {
+    flex: 0;
+}
+
+.link-button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.link-button img {
+    width: 15px;
+}
+
+.subgit {
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    border-style: ridge;
+    float: right;
+    padding: 2px;
+    color: rgb(170, 67, 67);
 }
 
 /*      Text        */
